@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import './Home.css'
 function Home() {
   const popularProducts = [
-    {title : 'Cryptocurrency ' , description : '' , price : '220$', imgsrc : './imgs/quiz.jpg'},
-    {title : 'Travel' , description : '' ,price : '100$', imgsrc : './imgs/travel1.jpg'},
-    {title : 'languages logos quiz' , description : '' , price : '90$', imgsrc : './imgs/travel.jpg'},
-    {title : 'Ye`s Albums ' , description : '', price : '240$' , imgsrc : './imgs/ye.jpg'} 
+    {title : 'Cryptocurrency ' , description : '' , languages : ['React Js', 'Css'] ,category : ['Web', 'Cryptocurrency'] , price : '220$', imgsrc : './imgs/quiz.jpg'},
+    {title : 'Travel' , description : '' ,languages : ['React Js', 'Css'], category : ['Web', 'traveling'] ,price : '100$', imgsrc : './imgs/travel1.jpg'},
+    {title : 'languages logos quiz' , description : '' ,languages : ['React Js', 'Css'], category : ['Web', 'Game'] , price : '90$', imgsrc : './imgs/travel.jpg'},
+    {title : 'Ye`s Albums ' , description : '',languages : ['React Js', 'Css'], category : ['Web', 'Music'] , price : '240$' , imgsrc : './imgs/ye.jpg'} 
   ]
 
   const categories = [
@@ -41,14 +41,14 @@ function Home() {
           )}
         </div>
         <div>
-          <p className='productTitle'>Most Popular</p>
+          <p className='productTitle'>Most Popular</p> 
           <div className='productProducts'>
             {popularProducts.map((product , index) => 
-            <div className='productProduct'>
+            <div key={index} className='productProduct'>
               <img style={{borderRadius : "5px"}} src={product.imgsrc} width={"250px"}></img>
               <p style={{fontSize : '23px' , fontWeight : "800", margin : "10px 5px"}}>{product.title}</p>
               <p style={{fontSize : '18px', fontWeight : "800",margin : "10px 5px 20px 5px" ,color : "#70e000"}}>{product.price}</p>
-              <button style={{color : 'white', fontSize : '17px',fontWeight : "800",width : "170px" ,margin : "0px 0px 5px 35px", padding : "10px", borderRadius : "5px" , border : "none", backgroundColor : "#260064"}}>Donwload</button>
+              <Link to={`/product/${product.title}/${product.price}/${product.imgsrc}/${product.languages}/${product.category}`}><button style={{color : 'white',fontSize : '17px',fontWeight : "800",width : "170px" ,margin : "0px 0px 5px 35px", padding : "10px", borderRadius : "5px" , border : "none", backgroundColor : "#260064"}}>Download</button></Link>
             </div>
             )}
           </div >
@@ -58,11 +58,11 @@ function Home() {
           <p className='productTitle'>Best Selling</p>
           <div className='productProducts'>
             {popularProducts.map((product , index) => 
-            <div className='productProduct'>
+            <div key={index} className='productProduct'>
               <img style={{borderRadius : "5px"}} src={product.imgsrc} width={"250px"}></img>
               <p style={{fontSize : '23px' , fontWeight : "800", margin : "10px 5px"}}>{product.title}</p>
               <p style={{fontSize : '18px', margin : "10px 5px 20px 5px" ,color : "#70e000"}}>{product.price}</p>
-              <Link to={`/product/${product.title}/${product.price}/${product.imgsrc}`}><button style={{color : 'white',fontSize : '17px',fontWeight : "800",width : "170px" ,margin : "0px 0px 5px 35px", padding : "10px", borderRadius : "5px" , border : "none", backgroundColor : "#260064"}}>Download</button></Link>
+              <Link to={`/product/${product.title}/${product.price}/${product.imgsrc}/${product.languages}/${product.category}`}><button style={{color : 'white',fontSize : '17px',fontWeight : "800",width : "170px" ,margin : "0px 0px 5px 35px", padding : "10px", borderRadius : "5px" , border : "none", backgroundColor : "#260064"}}>Download</button></Link>
             </div>
             )}
           </div>

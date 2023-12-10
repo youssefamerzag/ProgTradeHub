@@ -9,8 +9,8 @@ root.render(
     <div>
         <BrowserRouter>
             <Routes>
-                <Route path={process.env.PUBLIC_URL} element={<App></App>}></Route>
-                <Route path='/product/:title/:price/:imgsrc' element={<Product></Product>}></Route>
+                <Route path={process.env.PUBLIC_URL} element={<App/>}></Route>
+                <Route path='/product/:title/:price/imgs/:imgsrc/:languages/:category' element={<Product/>}></Route>
             </Routes>
         </BrowserRouter>
     </div>

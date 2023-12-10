@@ -32,6 +32,15 @@ nav li {
     width: 100px;
     padding: 18px 0px;
     font-size: 18px;
+    text-align: center;
+    transition: 0.2s;
+    font-weight: 700;
+}
+
+nav li:hover {
+    background-color: #bebcfc;
+    color: white;
+    transition: 0.2s;
 }
 
 .navbarRight {
@@ -69,4 +78,11 @@ nav li {
     border: none;
     margin: 10px;
     font-size: 18px;
+    transition: 0.2s;
+}
+
+.headBtn:hover {
+    background-color: #443fe6;
+    color: white;
+    transition: 0.2s;
 }

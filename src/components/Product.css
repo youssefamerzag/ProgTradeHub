@@ -1,0 +1,76 @@
+
+.productDetails {
+    background-color: rgb(223, 240, 255);
+    box-shadow: rgba(0, 0, 0, 0.521) 0px 3px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    justify-content: center;
+}
+
+.ProductInformation {
+    margin: 20px 10px 0px 10px;
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 35px;
+    background-color: #260064;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
+}
+
+
+.orderCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0px 0px 0px 20px;
+    padding: 10px 30px;
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: inherit;
+    margin-top: 50px;
+    margin-right: -30px;
+}
+
+.buyBtn {
+    width: 200px;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 214, 29);
+    color: white;
+    font-size: 20px;
+}
+
+.addBtn {
+    width: 200px;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #260064;
+    color: white;
+    font-size: 20px;
+}
+
+.LiveBtn {
+    width: 200px;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: #260064 solid 2px;
+    background-color: white;
+    font-size: 20px;
+}
